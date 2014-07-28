@@ -74,7 +74,7 @@
     }
     prizes = getPrizes(allPrizes);
     //testing getPrizes()
-    console.log(prizes);
+    //console.log(prizes);
 
     /* This function takes all the prizes and
     // the chosen prizes via getPrizes() function
@@ -93,7 +93,7 @@
 
     var banker = bankerPrizes(allPrizes, prizes);
     //testing bankerPrizes()
-    console.log(banker);
+    //console.log(banker);
     
     /* This function takes an associative array
     // of the chosen prizes
@@ -131,7 +131,7 @@
         // Note: This way you will not be able to see
         // the boxes array - if you want to test that,
         // comment the console.log on the next line */    
-        console.log(arrayOfPrizes);
+        //console.log(arrayOfPrizes);
 
         var boxes = [];
         for (var i = 0; i < 16; i++) {
@@ -159,7 +159,8 @@
 
     var boxes = getBoxes(prizes);
     //testing getBoxes()
-    console.log(boxes);
+    //console.log(boxes);
 
+	return [boxes, banker];
 }
 startGame();
