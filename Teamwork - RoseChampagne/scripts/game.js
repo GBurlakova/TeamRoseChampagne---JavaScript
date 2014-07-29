@@ -1,5 +1,6 @@
-var boxes = startGame()[0];
-var bankerOffers = startGame()[1];
+var startGameArray = startGame();
+var boxes = startGameArray[0];
+var bankerOffers = startGameArray[1];
 var player = {hasBox: false,
               boxesOpened: 0,
               box: 0};
