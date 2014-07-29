@@ -35,13 +35,14 @@ function play(boxes, bankerOffersSet, boxId){
             }
             restPrisezWeight = restPrisezWeight * 0.70;
             var closestPoints = 0;
-            var smallestDifference = 200;
+            var smallestDifference = 10000;
             var offerKey;
-            for (var i = 0; i < bankerOffers.length; i++) {
-                var currentDiff = Math.abs(bankerOffersSet[i].points - restPrisezWeight);
+            for (var i in bankerOffersSet) {
+                var currentDiff = Math.abs(i - restPrisezWeight);
                 if (currentDiff < smallestDifference) {
-                	closestPoints = bankerOffersSet[i].points;
+                	closestPoints = i;
                     offerKey = i;
+					smallestDifference = currentDiff;
                 }
             }
             offerFieldText.innerText = bankerOffersSet[offerField].prize;
@@ -49,7 +50,7 @@ function play(boxes, bankerOffersSet, boxId){
             var noDeal = document.getElementById('no-deal');
             deal.addEventListener('click', function(){
                 offerField.innerText = 'You just swapped ' + boxes[playerObj.box].prize + ' for '
-                                       + bankerOffersSet[offerKey].prize;
+                                       + bankerOffersSet[offerKey];
             });
             noDeal.addEventListener('click', function(){
                 offerField.removeAttribute('class');
