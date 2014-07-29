@@ -7,10 +7,11 @@ var player = {hasBox: false,
 for (var boxId = 0; boxId < 16; boxId++) {
     var box = document.getElementById(boxId.toString());
     box.setAttribute('class', 'closedBox');
-    boxes.innerText = boxId;
 
     //Add play function to the boxes
-    box.addEventListener('click', function(boxId){
+    box.addEventListener('click', function(){
+        var boxId = this.innerHTML;
+        var box = document.getElementById(boxId);
         //Checks if the player has already a box
         if (player.hasBox == false) {
             boxes[boxId].isPlayers = true;
@@ -42,7 +43,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 var offerFieldText = offerField.getElementById('text');
                 var restPrisezWeight = 0;
                 for(var prize in prisez){
-                    restPrisezWeight = prisez[prize].points;
+                    restPrisezWeight = boxes[boxId].points;
                 }
                 restPrisezWeight = restPrisezWeight * 0.70;
                 var closestPoints = 0;
@@ -51,7 +52,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 for (var i = 0; i < bankerOffers.length; i++) {
                     var currentDiff = Math.abs(bankerOffers[i].points - restPrisezWeight);
                     if (currentDiff < smallestDifference) {
-                        closestPoints = banker[i].points;
+                        closestPoints = bankerOffers[i].points;
                         offerKey = i;
                     }
                 }
