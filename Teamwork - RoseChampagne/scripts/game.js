@@ -17,9 +17,9 @@ question = document.getElementById('question');
 question.innerText = 'Choose your box';
 
 
-/This a function to detect when player's answer is expected/
-/If true - we disable boxes/
-/If not - we active them/
+//This a function to detect when player's answer is expected
+//If true - we disable boxes
+//If not - we active them
 function Bool(initialValue) {
     var bool = !!initialValue;
     var listeners = [];
