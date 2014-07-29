@@ -4,6 +4,12 @@ var player = {hasBox: false,
               boxesOpened: 0,
               box: 0};
 
+for (var prizeIndex = 0; prizeIndex < boxes.length; prizeIndex++) {
+    var prize = document.getElementById('prize' + (prizeIndex + 1));
+    prize.innerText = boxes[prizeIndex].prize;
+
+}
+
 for (var boxId = 0; boxId < 16; boxId++) {
     var box = document.getElementById(boxId.toString());
     box.setAttribute('class', 'closedBox');
@@ -16,7 +22,6 @@ for (var boxId = 0; boxId < 16; boxId++) {
         if (player.hasBox == false) {
             boxes[boxId].isPlayers = true;
             box.setAttribute('class', 'playersBox');
-            box.setAttribute('disabled', 'disabled');
             player.hasBox = true;
             player.box = boxId;
         } else {
@@ -25,7 +30,6 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 player.boxesOpened += 1;
                 box.removeAttribute('class');
                 box.setAttribute('class', 'openedBox');
-                box.innerText = boxes[boxId].prize;
                 delete boxes[boxId];
             }
 
@@ -49,11 +53,11 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 var closestPoints = 0;
                 var smallestDifference = 200;
                 var offerKey;
-                for (var i = 0; i < bankerOffers.length; i++) {
-                    var currentDiff = Math.abs(bankerOffers[i].points - restPrisezWeight);
+                for (var bluePrize = 0; bluePrize < bankerOffers.length; bluePrize++) {
+                    var currentDiff = Math.abs(bankerOffers[bluePrize].points - restPrisezWeight);
                     if (currentDiff < smallestDifference) {
-                        closestPoints = bankerOffers[i].points;
-                        offerKey = i;
+                        closestPoints = bankerOffers[bluePrize].points;
+                        offerKey = bluePrize;
                     }
                 }
                 offerFieldText.innerText = bankerOffers[offerField].prize;

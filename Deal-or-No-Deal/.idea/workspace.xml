@@ -26,8 +26,8 @@
       <file leaf-file-name="Deal or No Deal.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WorkingCopy/Deal or No Deal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.576923" vertical-offset="1225" max-vertical-offset="1989">
-              <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+            <state vertical-scroll-proportion="-15.653846" vertical-offset="970" max-vertical-offset="1989">
+              <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="Deal or No Deal - Style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WorkingCopy/style/Deal or No Deal - Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2465">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2499">
+              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WorkingCopy/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3884007" vertical-offset="0" max-vertical-offset="1394">
-              <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.23901582" vertical-offset="0" max-vertical-offset="1462">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -74,8 +74,8 @@
         <option value="$PROJECT_DIR$/startGame.js" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/game.js" />
-        <option value="$PROJECT_DIR$/WorkingCopy/style/Deal or No Deal - Style.css" />
         <option value="$PROJECT_DIR$/WorkingCopy/play.js" />
+        <option value="$PROJECT_DIR$/WorkingCopy/style/Deal or No Deal - Style.css" />
         <option value="$PROJECT_DIR$/WorkingCopy/Deal or No Deal.html" />
         <option value="$PROJECT_DIR$/WorkingCopy/game.js" />
       </list>
@@ -385,26 +385,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkingCopy/style/Deal or No Deal - Style.css">
+    <entry file="file://$PROJECT_DIR$/WorkingCopy/Deal or No Deal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2465">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state vertical-scroll-proportion="-15.653846" vertical-offset="970" max-vertical-offset="1989">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WorkingCopy/Deal or No Deal.html">
+    <entry file="file://$PROJECT_DIR$/WorkingCopy/style/Deal or No Deal - Style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.576923" vertical-offset="1225" max-vertical-offset="1989">
-          <caret line="102" column="45" selection-start-line="102" selection-start-column="45" selection-end-line="102" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="2499">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WorkingCopy/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3884007" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.23901582" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
           <folding />
         </state>
       </provider>

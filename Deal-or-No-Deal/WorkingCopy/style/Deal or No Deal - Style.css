@@ -25,6 +25,7 @@ div#boxes > div{
     width: 160px;
     height: 110px;
     background-size: cover;
+    font-size: 20px;
 }
 
 
@@ -36,15 +37,16 @@ div.closedBox{
     background-size: cover;
 }
 
+div.openedBox{
+    display: inline-block;
+    width: 160px;
+    height: 110px;
+    background-size: cover;
+    background: url('../images/shared_apac_packaging_box10kg_new.png');
+    opacity: 0.5;
+    color: rgb(210, 210, 210);
+}
 
-
-/*div#boxes > div:after{*/
-    /*content: ".";*/
-    /*visibility: hidden;*/
-    /*display: inline-block;*/
-    /*height: 0;*/
-    /*clear: both;*/
-/*}*/
 
 div#upper-part {
     margin: 0 auto;
