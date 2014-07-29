@@ -130,6 +130,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 //Here we remove the prize from the aside fields and from the with boxes set
                 var propertyToSearch = 'prize';
                 var idPrizeField = findIndexByValueAndProp(prizesSorted, propertyToSearch, boxes[boxId].prize);
+                idPrizeField += 1;
                 if (idPrizeField < (prizesSorted.length / 2)) {
                     soundSource = soundsHighPrizes[getRandomInt(0, soundsHighPrizes.length)];
                 } else {
@@ -140,8 +141,17 @@ for (var boxId = 0; boxId < 16; boxId++) {
                 boxes[boxId].isOpen = true;
                 delete boxes[boxId];
                 boxesLenght -= 1;
-                var prizeToClose = document.getElementById('prize' + (idPrizeField + 1));
-                prizeToClose.innerText = '';
+                var prizeToClose = document.getElementById('prize' + (idPrizeField));
+                if (idPrizeField >= 1 && idPrizeField <= 4) {
+                    prizeToClose.setAttribute('class', 'chosenPrizeBlue');
+                } else if (idPrizeField >= 5 && idPrizeField <= 8) {
+                    prizeToClose.setAttribute('class', 'chosenPrizeGreen');
+                } else if (idPrizeField >= 9 && idPrizeField <= 12) {
+                    prizeToClose.setAttribute('class', 'chosenPrizeYellow');
+                } else {
+                    prizeToClose.setAttribute('class', 'chosenPrizeRed');
+                }
+
             }
 
             //Check if on the field is left only one box - means end of the game
@@ -189,7 +199,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
                         restPrizesWeight += boxes[prize].points;
                     }
                 }
-                restPrizesWeight = restPrizesWeight * 0.70;
+                restPrizesWeight = Math.floor(restPrizesWeight * 0.70);
                 var closestPoints = 0;
                 var smallestDifference = 200;
                 for (var offer in bankerOffers) {
