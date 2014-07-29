@@ -6,7 +6,7 @@ var player = {hasBox: false,
               box: 0};
 
 window.onload = function(){
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 16; i++) {
         var idBox = i;
         boxes.push(document.getElementById(idBox));
     }
