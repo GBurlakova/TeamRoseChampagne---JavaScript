@@ -79,7 +79,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
         var box = document.getElementById(boxId + '');
         //Checks if the player has already a box
         if (player.hasBox == false) {
-           playerCooseBox(boxes, box, boxId, player, question);
+           choosePlayersBox(boxes, box, boxId, player, question);
         } else {
             //If the player has opened less than 2 boxes they can open another one
             if (player.boxesOpened < 2){

@@ -1,6 +1,6 @@
 //This is the function thar is called when the players have to choose their own boxes in the game
 
-function playerCooseBox(boxesSet, currentBox, currentBoxId, playerObject, questionText){
+function choosePlayersBox(boxesSet, currentBox, currentBoxId, playerObject, questionText){
     questionText = document.getElementById('question');
     questionText.innerText = 'Choose your box';
     boxesSet[currentBoxId].isPlayers = true;
