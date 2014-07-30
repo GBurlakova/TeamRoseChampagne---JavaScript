@@ -15,8 +15,8 @@ var player = {hasBox: false,
 var boxesCount = 16;
 var bankerField = document.getElementById('offerField');
 var bankerOffer = '';
-var deal = document.getElementById('deal');//Button
-var noDeal = document.getElementById('no-deal');//Button
+var deal = document.getElementById('deal');//rules-btn
+var noDeal = document.getElementById('no-deal');//rules-btn
 var soundPlayer = document.getElementById('player');
 var sound = document.getElementById('sound');
 var soundsLowPrizes = ['sounds/Crowd-Boo-Small.mp3',
@@ -63,6 +63,35 @@ disableBoxes.addListener(function(e){
             }
         }
     }
+});
+
+
+//Add rules-btn to open rules field
+var rulesButton = document.getElementById('btn-rules');
+var buttonRulesClicks = 1;
+var rulesField = document.getElementById('rules');
+var closeButton = document.getElementById('close');
+rulesButton.addEventListener('click', function(){
+    if (buttonRulesClicks == 1) {
+        rulesField.setAttribute('class', 'rules-visible');
+        buttonRulesClicks = 2;
+        disableBoxes(true);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    } else {
+        rulesField.setAttribute('class', 'rules-hidden');
+        buttonRulesClicks = 1;
+        disableBoxes(false);
+        deal.removeAttribute('disabled');
+        noDeal.removeAttribute('disabled');
+    }
+});
+closeButton.addEventListener('click', function(){
+    rulesField.setAttribute('class', 'rules-hidden');
+    buttonRulesClicks = 1;
+    disableBoxes(false);
+    deal.removeAttribute('disabled');
+    noDeal.removeAttribute('disabled');
 });
 
 

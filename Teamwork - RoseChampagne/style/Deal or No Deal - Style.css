@@ -259,3 +259,48 @@ button.players-box{
     color: rgb(50, 50, 50);
     font-size: 40px;
 }
+
+
+#btn-rules{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 0;
+    outline: none;
+}
+
+#btn-rules:hover{
+    cursor: pointer;
+}
+
+.rules-hidden{
+    display: none;
+}
+
+.rules-visible{
+    background: rgb(210, 210, 210);
+    position: absolute;
+    top: 220px;
+    left: 500px;
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.close:active{
+    position: relative;
+    top: 2px;
+}
