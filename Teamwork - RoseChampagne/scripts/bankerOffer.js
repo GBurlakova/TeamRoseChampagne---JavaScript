@@ -11,12 +11,12 @@ function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
     //Next lines calculate weight of the boxes left in game in order to choose
     //the closet offer by points among banker's offers
     var restPrizesWeight = 0;
-    for (var prize = 0; prize < boxesSet.length; prize++) {
-        if (boxesSet.hasOwnProperty(prize + '')) {
-            restPrizesWeight += boxesSet[prize].points;
-        }
+	var restBoxesCount = 0;
+    for (var i in boxesSet) {
+		restPrizesWeight += boxesSet[i].points;
+		restBoxesCount+=1;
     }
-    restPrizesWeight = Math.floor(restPrizesWeight * 0.70);
+    restPrizesWeight = Math.floor(restPrizesWeight * 0.85 / restBoxesCount);
     var closestPoints = 0;
     var smallestDifference = 200;
     for (var offer in bankerOffersSet) {
