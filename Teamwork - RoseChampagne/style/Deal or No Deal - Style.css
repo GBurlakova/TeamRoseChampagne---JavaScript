@@ -418,7 +418,37 @@ button.players-box{
 #btn-rules:hover, #story:hover, #about:hover{
     cursor: pointer;
 }
+#rulesField , #storyField, #aboutField{
+	border:3px solid black;
+	padding:15px;
+	text-align:left;
+	font-size:1.2em;
+}
 
+#rulesField img.close, #storyField img.close, #aboutField img.close{
+	position:absolute;
+	top:0;
+	right:0;
+}
+#rulesField ol {
+	margin-bottom:0;
+}
+#rulesField  header, #aboutField header{
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+#aboutField {
+	text-align:center;
+}
+#aboutField ul {
+	padding:0;
+	margin:0;
+}
+
+#aboutField ul  li {
+	list-style:none;
+}
 .hidden{
     display: none;
 }
@@ -429,8 +459,8 @@ button.players-box{
     top: 220px;
     left: 500px;
     width: 400px;
-    height: 400px;
-    overflow: scroll;
+    height: 365px;
+    overflow: auto;
     border-radius: 5px;
 }
 
