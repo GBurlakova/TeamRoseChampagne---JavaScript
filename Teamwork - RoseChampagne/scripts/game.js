@@ -93,7 +93,7 @@ rulesButton.addEventListener('click', function(){
     }
 });
 closeRulesButton.addEventListener('click', function(){
-    rulesField.setAttribute('class', 'rules-hidden');
+    rulesField.setAttribute('class', 'hidden');
     buttonRulesClicks = 1;
     if (bankerField.className == 'offerFieldVisible') {
         disableBoxes(true);
