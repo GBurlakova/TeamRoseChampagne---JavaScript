@@ -81,17 +81,29 @@ rulesButton.addEventListener('click', function(){
     } else {
         rulesField.setAttribute('class', 'rules-hidden');
         buttonRulesClicks = 1;
-        disableBoxes(false);
-        deal.removeAttribute('disabled');
-        noDeal.removeAttribute('disabled');
+        if (bankerField.className == 'offerFieldVisible') {
+            disableBoxes(true);
+            deal.setAttribute('disabled', 'disabled');
+            noDeal.setAttribute('disabled', 'disabled');
+        } else {
+            disableBoxes(false);
+            deal.removeAttribute('disabled');
+            noDeal.removeAttribute('disabled');
+        }
     }
 });
 closeButton.addEventListener('click', function(){
     rulesField.setAttribute('class', 'rules-hidden');
     buttonRulesClicks = 1;
-    disableBoxes(false);
-    deal.removeAttribute('disabled');
-    noDeal.removeAttribute('disabled');
+    if (bankerField.className == 'offerFieldVisible') {
+        disableBoxes(true);
+        deal.removeAttribute('disabled');
+        noDeal.removeAttribute('disabled');
+    } else {
+        disableBoxes(false);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    }
 });
 
 

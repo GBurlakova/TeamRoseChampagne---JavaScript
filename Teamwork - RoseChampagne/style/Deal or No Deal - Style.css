@@ -355,9 +355,9 @@ button.closedBox16{
     background-size: cover;
 }
 
-button.closedBox1:hover, button.closedBox2:hover, button.closedBox3:hover,button.closedBox4:hover,button.closedBox5:hover
-button.closedBox6:hover,button.closedBox7:hover,button.closedBox8:hover,button.closedBox9:hover,button.closedBox10:hover
-button.closedBox11:hover,button.closedBox12:hover,button.closedBox13:hover,button.closedBox14:hover,button.closedBox15:hover,
+button.closedBox1:hover, button.closedBox2:hover, button.closedBox3:hover, button.closedBox4:hover, button.closedBox5:hover,
+button.closedBox6:hover, button.closedBox7:hover, button.closedBox8:hover, button.closedBox9:hover, button.closedBox10:hover,
+button.closedBox11:hover, button.closedBox12:hover, button.closedBox13:hover, button.closedBox14:hover, button.closedBox15:hover,
 button.closedBox16:hover{
     opacity: 0.4;
     filter: alpha(opacity=40);
