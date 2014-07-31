@@ -15,14 +15,14 @@ function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealB
     noDealBtn.removeAttribute('disabled');
     dealBtn.addEventListener('click', function(){
 		questionText.removeAttribute('class');
-		questionText.setAttribute('class','hidden');
+		questionText.setAttribute('class','hidden-question');
         offerField.innerText = 'You just swapped ' + boxesSet[playerObj.box].prize + '\n' + ' for '
             + offerText;
         variableChangeDetector(true);
     });
     noDealBtn.addEventListener('click', function(){
 		questionText.removeAttribute('class');
-		questionText.setAttribute('class','hidden');
+		questionText.setAttribute('class','hidden-question');
         offerField = document.getElementById('offerField');
         offerField.removeAttribute('class');
         offerField.setAttribute('class', 'offerFieldVisible');
