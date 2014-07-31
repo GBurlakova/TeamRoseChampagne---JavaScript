@@ -69,17 +69,17 @@ disableBoxes.addListener(function(e){
 //Add rules-btn to open rules field
 var rulesButton = document.getElementById('btn-rules');
 var buttonRulesClicks = 1;
-var rulesField = document.getElementById('rules');
-var closeButton = document.getElementById('close');
+var rulesField = document.getElementById('rulesField');
+var closeRulesButton = document.getElementById('closeRules');
 rulesButton.addEventListener('click', function(){
     if (buttonRulesClicks == 1) {
-        rulesField.setAttribute('class', 'rules-visible');
+        rulesField.setAttribute('class', 'visible');
         buttonRulesClicks = 2;
         disableBoxes(true);
         deal.setAttribute('disabled', 'disabled');
         noDeal.setAttribute('disabled', 'disabled');
     } else {
-        rulesField.setAttribute('class', 'rules-hidden');
+        rulesField.setAttribute('class', 'hidden');
         buttonRulesClicks = 1;
         if (bankerField.className == 'offerFieldVisible') {
             disableBoxes(true);
@@ -92,7 +92,7 @@ rulesButton.addEventListener('click', function(){
         }
     }
 });
-closeButton.addEventListener('click', function(){
+closeRulesButton.addEventListener('click', function(){
     rulesField.setAttribute('class', 'rules-hidden');
     buttonRulesClicks = 1;
     if (bankerField.className == 'offerFieldVisible') {
@@ -105,6 +105,89 @@ closeButton.addEventListener('click', function(){
         noDeal.setAttribute('disabled', 'disabled');
     }
 });
+
+//Add story-btn to open story field
+var storyButton = document.getElementById('story');
+var buttonStoryClicks = 1;
+var storyField = document.getElementById('storyField');
+var closeStoryButton = document.getElementById('closeStory');
+storyButton.addEventListener('click', function(){
+    if (buttonStoryClicks == 1) {
+        storyField.setAttribute('class', 'visible');
+        buttonStoryClicks = 2;
+        disableBoxes(true);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    } else {
+        storyField.setAttribute('class', 'hidden');
+        buttonStoryClicks = 1;
+        if (bankerField.className == 'offerFieldVisible') {
+            disableBoxes(true);
+            deal.removeAttribute('disabled');
+            noDeal.removeAttribute('disabled');
+        } else {
+            disableBoxes(false);
+            deal.setAttribute('disabled', 'disabled');
+            noDeal.setAttribute('disabled', 'disabled');
+        }
+    }
+});
+closeStoryButton.addEventListener('click', function(){
+    storyField.setAttribute('class', 'hidden');
+    buttonStoryClicks = 1;
+    if (bankerField.className == 'offerFieldVisible') {
+        disableBoxes(true);
+        deal.removeAttribute('disabled');
+        noDeal.removeAttribute('disabled');
+    } else {
+        disableBoxes(false);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    }
+});
+
+//Add about-btn to open about field
+var aboutButton = document.getElementById('about');
+var buttonAboutClicks = 1;
+var aboutField = document.getElementById('aboutField');
+var closeAboutButton = document.getElementById('closeAbout');
+aboutButton.addEventListener('click', function(){
+    if (buttonStoryClicks == 1) {
+        aboutField.setAttribute('class', 'visible');
+        buttonAboutClicks = 2;
+        disableBoxes(true);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    } else {
+        aboutField.setAttribute('class', 'hidden');
+        buttonAboutClicks = 1;
+        if (bankerField.className == 'offerFieldVisible') {
+            disableBoxes(true);
+            deal.removeAttribute('disabled');
+            noDeal.removeAttribute('disabled');
+        } else {
+            disableBoxes(false);
+            deal.setAttribute('disabled', 'disabled');
+            noDeal.setAttribute('disabled', 'disabled');
+        }
+    }
+});
+closeAboutButton.addEventListener('click', function(){
+    aboutField.setAttribute('class', 'hidden');
+    buttonAboutClicks = 1;
+    if (bankerField.className == 'offerFieldVisible') {
+        disableBoxes(true);
+        deal.removeAttribute('disabled');
+        noDeal.removeAttribute('disabled');
+    } else {
+        disableBoxes(false);
+        deal.setAttribute('disabled', 'disabled');
+        noDeal.setAttribute('disabled', 'disabled');
+    }
+});
+
+
+
 
 
 //Main game logic

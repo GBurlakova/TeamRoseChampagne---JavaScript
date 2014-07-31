@@ -391,15 +391,39 @@ button.players-box{
     font-family: Showcard Gothic;
 }
 
-#btn-rules:hover{
+#story{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    border: 0;
+    outline: none;
+    font-family: Showcard Gothic;
+}
+
+#about{
+    font-size: 20px;
+    color: rgb(53, 53, 53);
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 175px;
+    border: 0;
+    outline: none;
+    font-family: Showcard Gothic;
+}
+
+#btn-rules:hover, #story:hover, #about:hover{
     cursor: pointer;
 }
 
-.rules-hidden{
+.hidden{
     display: none;
 }
 
-.rules-visible{
+.visible{
     background: rgb(210, 210, 210);
     position: absolute;
     top: 220px;

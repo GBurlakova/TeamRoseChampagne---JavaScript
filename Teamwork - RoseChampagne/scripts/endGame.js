@@ -29,7 +29,6 @@ function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealB
         offerField.innerText = 'You just won ' + boxesSet[playerObj.box].prize;
         variableChangeDetector(true);
     });
-
 }
 
 
