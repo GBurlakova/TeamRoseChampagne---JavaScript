@@ -3,7 +3,7 @@ function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
     playerObj.boxesOpened = 0;
     variableChangeDetector(true);
     questionText = document.getElementById('question');
-    questionText.innerText = 'И ко прайм ся';
+    questionText.innerText = 'Choose wisely';
     //Next lines set class to the banker's field in order to show it on the screen
     offerField = document.getElementById('offerField');
     offerField.removeAttribute('class');
