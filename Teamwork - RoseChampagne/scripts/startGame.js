@@ -74,7 +74,7 @@
     }
     prizes = getPrizes(allPrizes);
     //testing getPrizes()
-    //console.log(prizes);
+//    console.log(prizes);
 
     /* This function takes all the prizes and
     // the chosen prizes via getPrizes() function
@@ -159,7 +159,7 @@
 
     var boxes = getBoxes(prizes);
     //testing getBoxes()
-    //console.log(boxes);
+    console.log(boxes);
 
 	return [boxes, banker];
 }
