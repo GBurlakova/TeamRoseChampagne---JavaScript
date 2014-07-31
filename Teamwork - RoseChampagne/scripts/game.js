@@ -58,7 +58,7 @@ disableBoxes.addListener(function(e){
     } else {
         for (var boxDisabled = 0; boxDisabled < 16; boxDisabled++) {
             boxToActiveOrNot = document.getElementById(boxDisabled + '');
-            if (boxDisabled != player.box) {
+            if ((boxDisabled != player.box) || (player.hasBox == false)) {
                 boxToActiveOrNot.removeAttribute('disabled');
             }
         }
