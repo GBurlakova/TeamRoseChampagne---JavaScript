@@ -449,6 +449,9 @@ button.players-box{
 #aboutField ul  li {
 	list-style:none;
 }
+#storyField p {
+margin:3px;
+}
 .hidden{
     display: none;
 }
