@@ -244,13 +244,12 @@ div#blue div.prize, div#green div.prize, div#yellow div.prize, div#red div.prize
 }
 
 div#boxes {
-   width: 75%;
+    width: 75%;
     margin: 0 auto;
     margin-top: -80px;
 }
 
 div#boxes > button{
-    
     display: inline-block;
     width: 135px;
     height: 105px;
@@ -260,25 +259,103 @@ div#boxes > button{
     border: none;
 }
 
-
-button.closedBox {
-    background: url('../images/brownBoxRedSpot.png');
+button.closedBox1{
+    background: url('../images/box1.png');
     background-size: cover;
 }
-button.closedBox:hover {
+
+button.closedBox2{
+    background: url('../images/box2.png');
+    background-size: cover;
+}
+
+button.closedBox3{
+    background: url('../images/box3.png');
+    background-size: cover;
+}
+
+button.closedBox4{
+    background: url('../images/box4.png');
+    background-size: cover;
+}
+
+button.closedBox5{
+    background: url('../images/box5.png');
+    background-size: cover;
+}
+
+button.closedBox6{
+    background: url('../images/box6.png');
+    background-size: cover;
+}
+
+button.closedBox7{
+    background: url('../images/box7.png');
+    background-size: cover;
+}
+
+button.closedBox8{
+    background: url('../images/box8.png');
+    background-size: cover;
+}
+
+button.closedBox9{
+    background: url('../images/box9.png');
+    background-size: cover;
+}
+
+button.closedBox10{
+    background: url('../images/box10.png');
+    background-size: cover;
+}
+
+button.closedBox11{
+    background: url('../images/box11.png');
+    background-size: cover;
+}
+
+button.closedBox12{
+    background: url('../images/box12.png');
+    background-size: cover;
+}
+
+button.closedBox13{
+    background: url('../images/box13.png');
+    background-size: cover;
+}
+
+button.closedBox14{
+    background: url('../images/box14.png');
+    background-size: cover;
+}
+
+button.closedBox15{
+    background: url('../images/box15.png');
+    background-size: cover;
+}
+
+button.closedBox16{
+    background: url('../images/box16.png');
+    background-size: cover;
+}
+
+button.closedBox1:hover, button.closedBox2:hover, button.closedBox3:hover,button.closedBox4:hover,button.closedBox5:hover
+button.closedBox6:hover,button.closedBox7:hover,button.closedBox8:hover,button.closedBox9:hover,button.closedBox10:hover
+button.closedBox11:hover,button.closedBox12:hover,button.closedBox13:hover,button.closedBox14:hover,button.closedBox15:hover,
+button.closedBox16:hover{
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
 
 button.openedBox{
-    background: url('../images/brownBoxRedSpot.png');
+    background: url('../images/clearBrownBox.png');
     background-size: cover;
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
 
 button.players-box{
-    background: url('../images/myBox2.png');
+    background: url('../images/mybox2.png');
     background-size: cover;
     font-size: 0;
 }

@@ -100,11 +100,10 @@ closeButton.addEventListener('click', function(){
 //Then we add event listener to detect when a box is clicked
 for (var boxId = 0; boxId < 16; boxId++) {
     var box = document.getElementById(boxId.toString());
-    box.setAttribute('class', 'closedBox');
     //Add event listener
     box.addEventListener('click', function(){
         //From the current box clicked we get the number inside - this the prize number
-        var boxId = Number(this.innerHTML);
+        var boxId = Number(this.id);
         var box = document.getElementById(boxId + '');
         //Checks if the player has already a box
         if (player.hasBox == false) {
