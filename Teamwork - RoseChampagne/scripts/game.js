@@ -83,12 +83,12 @@ rulesButton.addEventListener('click', function(){
         buttonRulesClicks = 1;
         if (bankerField.className == 'offerFieldVisible') {
             disableBoxes(true);
-            deal.setAttribute('disabled', 'disabled');
-            noDeal.setAttribute('disabled', 'disabled');
-        } else {
-            disableBoxes(false);
             deal.removeAttribute('disabled');
             noDeal.removeAttribute('disabled');
+        } else {
+            disableBoxes(false);
+            deal.setAttribute('disabled', 'disabled');
+            noDeal.setAttribute('disabled', 'disabled');
         }
     }
 });
