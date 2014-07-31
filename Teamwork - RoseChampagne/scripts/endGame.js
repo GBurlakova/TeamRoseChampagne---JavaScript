@@ -1,9 +1,9 @@
 function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealBtn, noDealBtn, variableChangeDetector){
     questionText = document.getElementById('question');
-    questionText.innerText = 'И ко прайм ся';
+    questionText.innerText = 'Choose wisely';
     offerField.removeAttribute('class');
     offerField.setAttribute('class', 'offerFieldVisible');
-    offerField.innerText = 'Would like to swap your box for the one the field?';
+    offerField.innerText = 'Swap your box';
     for (var i = 0; i < boxesSet.length; i++) {
         if (boxesSet.hasOwnProperty(i + '') && (i != playerObj.box)) {
             offerText = boxesSet[i].prize;
