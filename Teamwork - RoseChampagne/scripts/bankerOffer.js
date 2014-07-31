@@ -34,6 +34,8 @@ function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
     dealBtn.removeAttribute('disabled');
     noDealBtn.removeAttribute('disabled');
     dealBtn.addEventListener('click', function(){
+		questionText.removeAttribute('class');
+		questionText.setAttribute('class','hidden');
         offerField.innerText = 'You just swapped ' + boxesSet[playerObj.box].prize + '\n' + ' for '
             + offerText;
         variableChangeDetector(true);

@@ -127,7 +127,9 @@ div#upper-part .offerFieldHidden{
     text-transform: capitalize;
     font-family: Showcard Gothic;
 }
-
+.hidden{
+	visibility:hidden;
+}
 
 /*Left side bar*/
 div#left {
