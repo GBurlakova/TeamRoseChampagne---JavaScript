@@ -12,7 +12,7 @@ function openNewBox(playerObj, boxesSet, currentBox, currentBoxId, soundSourceTe
     var propertyToSearch = 'prize';
     var idPrizeField = findIndexByValueAndProp(arrSortedPrizes, propertyToSearch, boxesSet[currentBoxId].prize);
     idPrizeField += 1;
-    if (idPrizeField < (arrSortedPrizes.length / 2)) {
+    if (idPrizeField <= (arrSortedPrizes.length / 2)) {
         soundSourceText = highPrizesSoundsSet[getRandomInt(0, highPrizesSoundsSet.length)];
     } else {
         soundSourceText = lowPrizesSoundsSet[getRandomInt(0, lowPrizesSoundsSet.length)];
