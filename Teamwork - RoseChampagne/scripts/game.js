@@ -19,10 +19,6 @@ var deal = document.getElementById('deal');//rules-btn
 var noDeal = document.getElementById('no-deal');//rules-btn
 var soundPlayer = document.getElementById('player');
 var sound = document.getElementById('sound');
-var soundsLowPrizes = ['sounds/Crowd-Boo-Small.mp3',
-                       'sounds/Failure-WahWah.mp3', 'sounds/Foghorn.mp3',
-                       'sounds/PressYourLuck-Whammy.mp3', 'sounds/Wheel-of-Fortune-Bankrupt.mp3'];
-var soundsHighPrizes = ['sounds/TaDa.mp3'];
 var soundSource = '';
 var question;
 question = document.getElementById('question');
@@ -181,9 +177,7 @@ for (var boxId = 0; boxId < 16; boxId++) {
         } else {
             //If the player has opened less than 2 boxes they can open another one
             if (player.boxesOpened < 2){
-                openNewBox(player, boxes, box, boxId,
-                           soundSource, soundsLowPrizes, soundsHighPrizes,
-                           sound, soundPlayer, question, prizesSorted);
+                openNewBox(player, boxes, box, boxId, question, prizesSorted);
                 boxesCount -= 1;
             }
             //Check if on the field is left only one box - means end of the game

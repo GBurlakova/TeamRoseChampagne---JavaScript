@@ -1,8 +1,4 @@
-function openNewBox(playerObj, boxesSet, currentBox, currentBoxId, soundSourceText,
-                    lowPrizesSoundsSet, highPrizesSoundsSet, soundSource, soundPlayerObj ,
-                    questionText, arrSortedPrizes){
-
-
+function openNewBox(playerObj, boxesSet, currentBox, currentBoxId, questionText, arrSortedPrizes){
     questionText = document.getElementById('question');
     questionText.innerText = 'Select two boxes';
     playerObj.boxesOpened += 1;
@@ -12,13 +8,7 @@ function openNewBox(playerObj, boxesSet, currentBox, currentBoxId, soundSourceTe
     var propertyToSearch = 'prize';
     var idPrizeField = findIndexByValueAndProp(arrSortedPrizes, propertyToSearch, boxesSet[currentBoxId].prize);
     idPrizeField += 1;
-    if (idPrizeField <= (arrSortedPrizes.length / 2)) {
-        soundSourceText = highPrizesSoundsSet[getRandomInt(0, highPrizesSoundsSet.length)];
-    } else {
-        soundSourceText = lowPrizesSoundsSet[getRandomInt(0, lowPrizesSoundsSet.length)];
-    }
-    soundSource.src = soundSourceText;
-    soundPlayerObj.load();
+    setASound(soundSource, sound, soundPlayer);
     boxesSet[currentBoxId].isOpen = true;
     delete boxesSet[currentBoxId];
     var prizeToClose = document.getElementById('prize' + (idPrizeField));
