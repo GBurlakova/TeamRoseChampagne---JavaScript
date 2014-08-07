@@ -6,12 +6,12 @@
 function disableBoxes(bool){
     var boxToActiveOrNot;
     if (bool == true) {
-        for (var boxActive = 0; boxActive < 16; boxActive++) {
+        for (var boxActive = 0; boxActive < BOXES_COUNT; boxActive++) {
             boxToActiveOrNot = document.getElementById(boxActive + '');
             boxToActiveOrNot.setAttribute('disabled', 'disabled');
         }
     } else {
-        for (var boxDisabled = 0; boxDisabled < 16; boxDisabled++) {
+        for (var boxDisabled = 0; boxDisabled < BOXES_COUNT; boxDisabled++) {
             boxToActiveOrNot = document.getElementById(boxDisabled + '');
             if ((boxDisabled != player.box) || (player.hasBox == false)) {
                 boxToActiveOrNot.removeAttribute('disabled');

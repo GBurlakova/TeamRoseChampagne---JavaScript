@@ -4,7 +4,7 @@ function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealB
     offerField.removeAttribute('class');
     offerField.setAttribute('class', 'offerFieldVisible');
     offerField.innerText = 'Swap your box';
-    for (var i = 0; i < boxesSet.length; i++) {
+    for (var i = 0; i < BOXES_COUNT; i++) {
         if (boxesSet.hasOwnProperty(i + '') && (i != playerObj.box)) {
             offerText = boxesSet[i].prize;
         }

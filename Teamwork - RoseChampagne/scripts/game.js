@@ -12,7 +12,8 @@ var player = {hasBox: false,
               box: 0};
 
 //These are the variables for the field components
-var boxesCount = 16;
+const BOXES_COUNT = 16;
+var boxesLeftOnField = BOXES_COUNT;
 var bankerField = document.getElementById('offerField');
 var bankerOffer = '';
 var deal = document.getElementById('deal');//rules-btn
@@ -29,14 +30,14 @@ question.innerText = 'Choose your box';
 //Sort
 var prize;
 var prizesSorted = [];
-for (var prizeIndex = 0; prizeIndex < boxes.length; prizeIndex++) {
+for (var prizeIndex = 0; prizeIndex < BOXES_COUNT; prizeIndex++) {
     prizesSorted.push(boxes[prizeIndex]);
 }
 prizesSorted.sort(function(previousPrize, currentPrize){
     return previousPrize.points - currentPrize.points;
 });
 //Add each prize to its field
-for (var index = 0; index < prizesSorted.length; index++) {
+for (var index = 0; index < BOXES_COUNT; index++) {
     prize = document.getElementById('prize' + (index + 1));
     prize.innerText = prizesSorted[index].prize;
 }
@@ -164,7 +165,7 @@ closeAboutButton.addEventListener('click', function(){
 //Main game logic
 //First we add class 'closedBox' to all boxes on the field
 //Then we add event listener to detect when a box is clicked
-for (var boxId = 0; boxId < 16; boxId++) {
+for (var boxId = 0; boxId < BOXES_COUNT; boxId++) {
     var box = document.getElementById(boxId.toString());
     //Add event listener
     box.addEventListener('click', function(){
@@ -178,10 +179,10 @@ for (var boxId = 0; boxId < 16; boxId++) {
             //If the player has opened less than 2 boxes they can open another one
             if (player.boxesOpened < 2){
                 openNewBox(player, boxes, box, boxId, question, prizesSorted);
-                boxesCount -= 1;
+                boxesLeftOnField -= 1;
             }
             //Check if on the field is left only one box - means end of the game
-            if (boxesCount == 2) {
+            if (boxesLeftOnField == 2) {
                 disableBoxes(true);
                 endGame(boxes, player, question, bankerField, bankerOffer, deal, noDeal);
                 return;
