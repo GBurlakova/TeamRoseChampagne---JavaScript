@@ -22,7 +22,7 @@ var sound = document.getElementById('sound');
 var soundsLowPrizes = ['sounds/Crowd-Boo-Small.mp3',
                        'sounds/Failure-WahWah.mp3', 'sounds/Foghorn.mp3',
                        'sounds/PressYourLuck-Whammy.mp3', 'sounds/Wheel-of-Fortune-Bankrupt.mp3'];
-var soundsHighPrizes = ['sounds/TaDa.mp3',];
+var soundsHighPrizes = ['sounds/TaDa.mp3'];
 var soundSource = '';
 var question;
 question = document.getElementById('question');
@@ -30,7 +30,6 @@ question.innerText = 'Choose your box';
 
 
 //Here we need to sort the prizes by points and then to add them to the aside fields
-
 //Sort
 var prize;
 var prizesSorted = [];
@@ -45,26 +44,6 @@ for (var index = 0; index < prizesSorted.length; index++) {
     prize = document.getElementById('prize' + (index + 1));
     prize.innerText = prizesSorted[index].prize;
 }
-
-//Initialization of a detector to detect when the boxes have to be disabled
-var disableBoxes = Bool(false);
-var boxToActiveOrNot;
-disableBoxes.addListener(function(e){
-    if (e.newValue == true) {
-        for (var boxActive = 0; boxActive < 16; boxActive++) {
-            boxToActiveOrNot = document.getElementById(boxActive + '');
-            boxToActiveOrNot.setAttribute('disabled', 'disabled');
-        }
-    } else {
-        for (var boxDisabled = 0; boxDisabled < 16; boxDisabled++) {
-            boxToActiveOrNot = document.getElementById(boxDisabled + '');
-            if ((boxDisabled != player.box) || (player.hasBox == false)) {
-                boxToActiveOrNot.removeAttribute('disabled');
-            }
-        }
-    }
-});
-
 
 //Add rules-btn to open rules field
 var rulesButton = document.getElementById('btn-rules');
@@ -186,10 +165,6 @@ closeAboutButton.addEventListener('click', function(){
     }
 });
 
-
-
-
-
 //Main game logic
 //First we add class 'closedBox' to all boxes on the field
 //Then we add event listener to detect when a box is clicked
@@ -214,12 +189,12 @@ for (var boxId = 0; boxId < 16; boxId++) {
             //Check if on the field is left only one box - means end of the game
             if (boxesCount == 2) {
                 disableBoxes(true);
-                endGame(boxes, player, question, bankerField, bankerOffer, deal, noDeal, disableBoxes);
+                endGame(boxes, player, question, bankerField, bankerOffer, deal, noDeal);
                 return;
             }
             //Banker offers if the player has opened 2 boxes
             if (player.boxesOpened == 2) {
-                offer(boxes, bankerOffers, player, disableBoxes, question, bankerField, bankerOffer, deal, noDeal);
+                offer(boxes, bankerOffers, player, question, bankerField, bankerOffer, deal, noDeal);
             }
         }
     })

@@ -1,7 +1,6 @@
-function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
-               questionText, offerField, offerText, dealBtn, noDealBtn){
+function offer(boxesSet, bankerOffersSet, playerObj, questionText, offerField, offerText, dealBtn, noDealBtn){
     playerObj.boxesOpened = 0;
-    variableChangeDetector(true);
+    disableBoxes(true);
     questionText = document.getElementById('question');
     questionText.innerText = 'Choose wisely';
     //Next lines set class to the banker's field in order to show it on the screen
@@ -38,7 +37,7 @@ function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
 		questionText.setAttribute('class','hidden-question');
         offerField.innerText = 'You just swapped ' + boxesSet[playerObj.box].prize + '\n' + ' for '
             + offerText;
-        variableChangeDetector(true);
+        disableBoxes(true);
         dealBtn.removeAttribute('class');
         noDealBtn.removeAttribute('class');
         dealBtn.setAttribute('disabled', 'disabled');
@@ -49,7 +48,7 @@ function offer(boxesSet, bankerOffersSet, playerObj, variableChangeDetector,
         questionText.innerText = 'Select two boxes';
         offerField.removeAttribute('class');
         offerField.setAttribute('class', 'offerFieldHidden');
-        variableChangeDetector(false);
+        disableBoxes(false);
         dealBtn.removeAttribute('class');
         noDealBtn.removeAttribute('class');
         dealBtn.setAttribute('disabled', 'disabled');

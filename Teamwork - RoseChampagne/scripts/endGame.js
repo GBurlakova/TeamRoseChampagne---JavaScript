@@ -1,4 +1,4 @@
-function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealBtn, noDealBtn, variableChangeDetector){
+function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealBtn, noDealBtn){
     questionText = document.getElementById('question');
     questionText.innerText = 'Choose wisely';
     offerField.removeAttribute('class');
@@ -18,7 +18,7 @@ function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealB
 		questionText.setAttribute('class','hidden-question');
         offerField.innerText = 'You just swapped ' + boxesSet[playerObj.box].prize + '\n' + ' for '
             + offerText;
-        variableChangeDetector(true);
+        disableBoxes(true);
     });
     noDealBtn.addEventListener('click', function(){
 		questionText.removeAttribute('class');
@@ -27,7 +27,7 @@ function endGame(boxesSet, playerObj, questionText, offerField, offerText, dealB
         offerField.removeAttribute('class');
         offerField.setAttribute('class', 'offerFieldVisible');
         offerField.innerText = 'You just won ' + boxesSet[playerObj.box].prize;
-        variableChangeDetector(true);
+        disableBoxes(true);
     });
 }
 
