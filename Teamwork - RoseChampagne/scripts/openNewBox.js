@@ -8,7 +8,7 @@ function openNewBox(playerObj, boxesSet, currentBox, currentBoxId, questionText,
     var propertyToSearch = 'prize';
     var idPrizeField = findIndexByValueAndProp(arrSortedPrizes, propertyToSearch, boxesSet[currentBoxId].prize);
     idPrizeField += 1;
-    setASound(soundSource, sound, soundPlayer);
+    setASound(soundSource, sound, soundPlayer, idPrizeField);
     boxesSet[currentBoxId].isOpen = true;
     delete boxesSet[currentBoxId];
     var prizeToClose = document.getElementById('prize' + (idPrizeField));

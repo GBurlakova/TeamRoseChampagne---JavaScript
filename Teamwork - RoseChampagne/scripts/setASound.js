@@ -4,7 +4,7 @@ function setASound(soundSourceText, soundSource, soundPlayerObj, idField){
         'sounds/Failure-WahWah.mp3', 'sounds/Foghorn.mp3',
         'sounds/PressYourLuck-Whammy.mp3', 'sounds/Wheel-of-Fortune-Bankrupt.mp3'];
     var soundsHighPrizes = ['sounds/TaDa.mp3'];
-    if (idField <= 8) {
+    if (idField <= BOXES_COUNT / 2) {
         soundSourceText = soundsHighPrizes[getRandomInt(0, soundsHighPrizes.length)];
     } else {
         soundSourceText = soundsLowPrizes[getRandomInt(0, soundsLowPrizes.length)];
